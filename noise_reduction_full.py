@@ -8,7 +8,7 @@ from scipy.signal import wiener
 from pystoi import stoi
 import soundfile as sf
 from scipy.io import wavfile
-More Accurate PESQ Approximation (1.0 - 4.5)
+# More Accurate PESQ Approximation (1.0 - 4.5)
 def pesq_accurate(clean_file, processed_file):
 """
 Approximate PESQ score (1.0-4.5) mimicking perceptual quality.
@@ -41,7 +41,7 @@ pesq_score = np.clip(pesq_score, 1.0, 4.5)
 return pesq_score
 LMS Adaptive Filter
 class LMS:
-def init (self, order=32, mu=0.001):
+def _init_ (self, order=32, mu=0.001):
 self.order = order
 self.mu = mu
 self.w = np.zeros(order)
@@ -133,6 +133,6 @@ plt.plot(clean)
 plt.tight_layout() plt.show()
 print(" Cleaned audio saved as final_cleaned.wav") #
 Run the system
-if name
-== " main ":
+if _name_
+== " _main_ ":
 run_system()
